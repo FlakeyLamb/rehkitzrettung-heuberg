@@ -110,6 +110,25 @@
         }
         .motto-card p { font-size: 1.6rem; font-weight: 700; color: #ffffff; font-style: italic; }
         @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } }
+
+        /* Fußzeilen-Styles */
+        footer {
+            width: 100%;
+            background: rgba(7, 13, 9, 0.95);
+            border-top: 1px solid rgba(46, 90, 54, 0.3);
+            padding: 30px 20px;
+            text-align: center;
+            color: #9ca3af;
+            font-size: 0.9rem;
+            margin-top: 60px;
+        }
+        footer a {
+            color: #4ade80;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        footer a:hover { color: #ffffff; }
     </style>
 </head>
 <body>
@@ -120,7 +139,7 @@
                 <li><a href="index.html">Startseite</a></li>
                 <li><a href="ablauf.html">Rettungsablauf</a></li>
                 <li><a href="ueber-uns.html" style="color: #4ade80;">Über uns</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="kontakt.html#kontakt">Kontakt</a></li>
             </ul>
         </nav>
     </header>
@@ -152,5 +171,15 @@
             <p>„Essen, schlafen, Kitze retten, wiederholen.“</p>
         </div>
     </main>
+
+    <!-- Fußzeile (Footer) -->
+    <footer>
+        <p style="margin-bottom: 10px;">&copy; 2026 Rehkitzrettung Heuberg e.V. – Alle Rechte vorbehalten.</p>
+        <p>
+            <a href="kontakt.html#impressum">Impressum</a> | 
+            <a href="kontakt.html#datenschutz">Datenschutz</a> | 
+            <a href="kontakt.html#kontakt">Kontakt</a>
+        </p>
+    </footer>
 </body>
 </html>

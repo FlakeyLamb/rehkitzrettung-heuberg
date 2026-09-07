@@ -53,17 +53,19 @@
         }
         nav ul li a:hover { color: #4ade80; }
         
+        /* --- Hero-Bereich --- */
         .hero-section {
-            height: 85vh;
-            margin-top: 75px;
-            background: linear-gradient(rgba(7, 13, 9, 0.4), rgba(7, 13, 9, 0.7)), 
+            height: 90vh;
+            padding-top: 80px;
+            background: linear-gradient(rgba(7, 13, 9, 0.5), rgba(7, 13, 9, 0.8)), 
                         url('rehkitz.jpg') center/cover no-repeat;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 0 20px;
+            padding-left: 20px;
+            padding-right: 20px;
             border-bottom: 1px solid rgba(46, 90, 54, 0.3);
             animation: fadeInUp 1s ease-out;
         }
@@ -83,7 +85,7 @@
             line-height: 1.5;
         }
 
-        /* --- Neuer Infobereich: Warum retten? --- */
+        /* --- Infobereich --- */
         .info-section {
             max-width: 900px;
             margin: 60px auto;
@@ -112,6 +114,25 @@
         .info-card p:last-child {
             margin-bottom: 0;
         }
+
+        /* Fußzeile */
+        footer {
+            width: 100%;
+            background: rgba(7, 13, 9, 0.95);
+            border-top: 1px solid rgba(46, 90, 54, 0.3);
+            padding: 30px 20px;
+            text-align: center;
+            color: #9ca3af;
+            font-size: 0.9rem;
+            margin-top: 60px;
+        }
+        footer a {
+            color: #4ade80;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        footer a:hover { color: #ffffff; }
     </style>
 </head>
 <body>
@@ -122,7 +143,7 @@
                 <li><a href="index.html" style="color: #4ade80;">Startseite</a></li>
                 <li><a href="ablauf.html">Rettungsablauf</a></li>
                 <li><a href="ueber-uns.html">Über uns</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="kontakt.html#kontakt">Kontakt</a></li>
             </ul>
         </nav>
     </header>
@@ -139,5 +160,15 @@
             <p>Wenn Wiesen für die Futterernte gemäht werden, sind die gut versteckten Tiere für Landwirte auf dem Traktor meist unmöglich rechtzeitig zu erkennen. Die hochmodernen Mähwerke arbeiten so schnell und flächig, dass Rehkitze ohne vorherige Suche dem sicheren Tod oder schweren Verletzungen ausgesetzt wären. Mit unserer Drohnensuche verhindern wir genau das und schützen die Jungtiere wirksam vor dem Mähtod.</p>
         </div>
     </section>
+
+    <!-- Fußzeile (Footer) -->
+    <footer>
+        <p style="margin-bottom: 10px;">&copy; 2026 Rehkitzrettung Heuberg e.V. – Alle Rechte vorbehalten.</p>
+        <p>
+            <a href="kontakt.html#impressum">Impressum</a> | 
+            <a href="kontakt.html#datenschutz">Datenschutz</a> | 
+            <a href="kontakt.html#kontakt">Kontakt</a>
+        </p>
+    </footer>
 </body>
 </html>

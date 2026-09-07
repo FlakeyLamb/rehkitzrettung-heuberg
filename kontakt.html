@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt – Rehkitzrettung Heuberg e.V.</title>
+    <title>Kontakt & Impressum – Rehkitzrettung Heuberg e.V.</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #070d09 0%, #0d1a12 50%, #050a07 100%);
@@ -13,14 +18,17 @@
             min-height: 100vh;
             overflow-x: hidden;
         }
+
         @keyframes fadeInDown {
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
         header {
             width: 100%;
             padding: 15px 40px;
@@ -36,6 +44,7 @@
             z-index: 1000;
             animation: fadeInDown 0.8s ease-out;
         }
+
         .brand-name {
             font-size: 1rem;
             font-weight: 700;
@@ -43,6 +52,7 @@
             color: #ffffff;
             text-transform: uppercase;
         }
+
         nav ul { display: flex; list-style: none; gap: 25px; }
         nav ul li a {
             color: #d1d5db;
@@ -52,12 +62,14 @@
             transition: color 0.3s ease;
         }
         nav ul li a:hover { color: #4ade80; }
+
         .content-section {
             max-width: 800px;
             margin: 120px auto 60px auto;
             padding: 0 20px;
             animation: fadeInUp 0.8s ease-out;
         }
+
         .section-title {
             font-size: 2.2rem;
             font-weight: 800;
@@ -66,29 +78,47 @@
             text-align: center;
             letter-spacing: 0.5px;
         }
+
         .section-subtitle {
             font-size: 1.05rem;
             color: #9ca3af;
             text-align: center;
             margin-bottom: 40px;
         }
-        .contact-card {
-            background: rgba(13, 26, 18, 0.85);
-            border: 1px solid rgba(46, 90, 54, 0.4);
+
+        /* Gemeinsames Kasten-Layout (Raster) */
+        .content-card {
+            background: rgba(18, 38, 25, 0.85);
+            border: 1px solid rgba(74, 222, 128, 0.3);
             border-radius: 16px;
-            padding: 40px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
+            padding: 35px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            margin-bottom: 35px;
+            scroll-margin-top: 100px;
+            transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
         }
+
+        /* Hellerer Kasten zur aktiven Hervorhebung */
+        .content-card:target {
+            background: rgba(28, 56, 37, 0.95);
+            border: 2px solid #4ade80;
+            box-shadow: 0 0 20px rgba(74, 222, 128, 0.25);
+            transform: scale(1.01);
+        }
+
         .contact-item {
             display: flex;
             align-items: center;
             gap: 20px;
             font-size: 1.1rem;
             color: #f3f4f6;
+            margin-bottom: 20px;
         }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
         .contact-icon {
             background: #2e5a36;
             color: #ffffff;
@@ -101,15 +131,65 @@
             font-size: 1.3rem;
             flex-shrink: 0;
         }
-        .contact-item a {
+
+        .contact-item a, .content-card a {
             color: #4ade80;
             text-decoration: none;
             transition: opacity 0.3s ease;
         }
-        .contact-item a:hover { opacity: 0.8; }
+        
+        .contact-item a:hover, .content-card a:hover { opacity: 0.8; }
+
+        /* Uberschriften in den Kästen */
+        .content-card h2 {
+            font-size: 1.6rem;
+            color: #4ade80;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(74, 222, 128, 0.2);
+            padding-bottom: 8px;
+        }
+
+        .content-card h3 {
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+        .content-card p {
+            color: #d1d5db;
+            line-height: 1.6;
+            font-size: 0.98rem;
+            margin-bottom: 12px;
+        }
+
+        .content-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Fußzeile */
+        footer {
+            width: 100%;
+            background: rgba(7, 13, 9, 0.95);
+            border-top: 1px solid rgba(46, 90, 54, 0.3);
+            padding: 30px 20px;
+            text-align: center;
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #4ade80;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover { color: #ffffff; }
     </style>
 </head>
 <body>
+
     <header>
         <div class="brand-name">Rehkitzrettung Heuberg e.V.</div>
         <nav>
@@ -117,16 +197,18 @@
                 <li><a href="index.html">Startseite</a></li>
                 <li><a href="ablauf.html">Rettungsablauf</a></li>
                 <li><a href="ueber-uns.html">Über uns</a></li>
-                <li><a href="kontakt.html" style="color: #4ade80;">Kontakt</a></li>
+                <li><a href="kontakt.html#kontakt" style="color: #4ade80;">Kontakt</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="content-section">
-        <h1 class="section-title">Kontakt & Einsatzanfrage</h1>
-        <p class="section-subtitle">Sie sind Landwirt und möchten eine Wiese für die Rettung anmelden oder haben Fragen an unseren Verein?</p>
+        <h1 class="section-title">Kontakt & Rechtliches</h1>
+        <p class="section-subtitle">Anfragen für Rehkitzrettungen, Vereinsdaten und gesetzliche Informationen.</p>
         
-        <div class="contact-card">
+        <!-- Kasten 1: Kontakt -->
+        <div class="content-card" id="kontakt">
+            <h2>Kontakt & Einsatzanfrage</h2>
             <div class="contact-item">
                 <div class="contact-icon">📍</div>
                 <div>
@@ -151,6 +233,52 @@
                 </div>
             </div>
         </div>
+
+        <!-- Kasten 2: Impressum -->
+        <div class="content-card" id="impressum">
+            <h2>Impressum</h2>
+            <p><strong>Angaben gemäß § 5 TMG:</strong></p>
+            <p>
+                Rehkitzrettung Heuberg e.V.<br>
+                Musterstraße 1<br>
+                78532 Tuttlingen
+            </p>
+            
+            <p>
+                <strong>Vertreten durch den Vorstand:</strong><br>
+                1. Vorsitzende/r: [Dein Name / Name des Vorstands]<br>
+                2. Vorsitzende/r: [Name]
+            </p>
+
+            <p>
+                <strong>Registereintrag:</strong><br>
+                Eintragung im Vereinsregister.<br>
+                Registergericht: Amtsgericht Stuttgart / Tuttlingen<br>
+                Registernummer: VR [Deine Nummer]
+            </p>
+        </div>
+
+        <!-- Kasten 3: Datenschutz -->
+        <div class="content-card" id="datenschutz">
+            <h2>Datenschutzerklärung</h2>
+            <h3>1. Datenschutz auf einen Blick</h3>
+            <p>Wir nehmen den Schutz deiner persönlichen Daten sehr ernst. Diese Website dient der Information über die Arbeit des Vereins Rehkitzrettung Heuberg e.V.</p>
+
+            <h3>2. Datenerfassung auf unserer Website</h3>
+            <p><strong>Hosting (GitHub Pages):</strong> Diese Website wird als statische Seite gehostet. Beim Aufruf verarbeitet der Provider technische Daten (wie IP-Adressen in Server-Logfiles), die zur Bereitstellung der Seite notwendig sind.</p>
+            <p><strong>Kontaktaufnahme:</strong> Wenn du uns per E-Mail oder Telefon kontaktierst, werden deine Angaben zwecks Bearbeitung der Anfrage bei uns gespeichert.</p>
+        </div>
     </main>
+
+    <!-- Fußzeile (Footer) -->
+    <footer>
+        <p style="margin-bottom: 10px;">&copy; 2026 Rehkitzrettung Heuberg e.V. – Alle Rechte vorbehalten.</p>
+        <p>
+            <a href="kontakt.html#impressum">Impressum</a> | 
+            <a href="kontakt.html#datenschutz">Datenschutz</a> | 
+            <a href="kontakt.html#kontakt">Kontakt</a>
+        </p>
+    </footer>
+
 </body>
 </html>
