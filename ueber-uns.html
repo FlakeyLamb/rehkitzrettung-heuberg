@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über uns – Rehkitzrettung Heuberg e.V.</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #070d09 0%, #0d1a12 50%, #050a07 100%);
+            color: #f3f4f6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        header {
+            width: 100%;
+            padding: 15px 40px;
+            background: rgba(7, 13, 9, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(46, 90, 54, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            animation: fadeInDown 0.8s ease-out;
+        }
+        .brand-name {
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav ul li a {
+            color: #d1d5db;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover { color: #4ade80; }
+        .content-section {
+            max-width: 1000px;
+            margin: 120px auto 60px auto;
+            padding: 0 20px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 40px;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+        .about-card {
+            background: rgba(13, 26, 18, 0.85);
+            border: 1px solid rgba(46, 90, 54, 0.4);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .about-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(74, 222, 128, 0.6);
+        }
+        .about-card h3 {
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .about-card p { font-size: 1rem; color: #9ca3af; line-height: 1.6; }
+        .motto-card {
+            background: linear-gradient(135deg, rgba(46, 90, 54, 0.2), rgba(13, 26, 18, 0.95));
+            border: 1px solid rgba(74, 222, 128, 0.4);
+            border-radius: 16px;
+            padding: 35px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+        .motto-card h3 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #4ade80;
+            margin-bottom: 10px;
+        }
+        .motto-card p { font-size: 1.6rem; font-weight: 700; color: #ffffff; font-style: italic; }
+        @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand-name">Rehkitzrettung Heuberg e.V.</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="ablauf.html">Rettungsablauf</a></li>
+                <li><a href="ueber-uns.html" style="color: #4ade80;">Über uns</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-section">
+        <h1 class="section-title">Über uns</h1>
+        
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>🌱 Unsere Geschichte</h3>
+                <p>Gegründet im Jahr 2022, setzen wir uns als Rehkitzrettung Heuberg e.V. mit vollem Einsatz für den Schutz von Wildtieren in unserer Region ein. Was als Initiative begann, ist heute fester Bestandteil einer tierschutzgerechten und modernen Landwirtschaft.</p>
+            </div>
+
+            <div class="about-card">
+                <h3>🚁 Technik & Ausrüstung</h3>
+                <p>Ausgestattet mit drei professionellen Vereinsdrohnen inklusive Wärmebildtechnik spüren wir die gut getarnten Kitze früh morgens vor der Mahd auf, um sie vor dem sicheren Tod im hohen Gras zu bewahren.</p>
+            </div>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-card" style="grid-column: 1 / -1;">
+                <h3>🤝 Ehrenamt & Finanzierung</h3>
+                <p>Unsere gesamte Arbeit basiert auf rein ehrenamtlichem Engagement und wird ausschließlich über Spenden finanziert. Nur so können wir unsere Einsätze für die Landwirte unkompliziert, zuverlässig und kostenfrei anbieten.</p>
+            </div>
+        </div>
+
+        <div class="motto-card">
+            <h3>Unser Leitspruch</h3>
+            <p>„Essen, schlafen, Kitze retten, wiederholen.“</p>
+        </div>
+    </main>
+</body>
+</html>

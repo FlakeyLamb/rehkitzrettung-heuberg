@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rehkitzrettung Heuberg e.V.</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #070d09 0%, #0d1a12 50%, #050a07 100%);
+            color: #f3f4f6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        header {
+            width: 100%;
+            padding: 15px 40px;
+            background: rgba(7, 13, 9, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(46, 90, 54, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            animation: fadeInDown 0.8s ease-out;
+        }
+        .brand-name {
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav ul li a {
+            color: #d1d5db;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover { color: #4ade80; }
+        
+        .hero-section {
+            height: 85vh;
+            margin-top: 75px;
+            background: linear-gradient(rgba(7, 13, 9, 0.4), rgba(7, 13, 9, 0.7)), 
+                        url('rehkitz.jpg') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            border-bottom: 1px solid rgba(46, 90, 54, 0.3);
+            animation: fadeInUp 1s ease-out;
+        }
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 15px;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+            letter-spacing: 0.5px;
+        }
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #e5e7eb;
+            max-width: 650px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+            line-height: 1.5;
+        }
+
+        /* --- Neuer Infobereich: Warum retten? --- */
+        .info-section {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+            animation: fadeInUp 1.2s ease-out;
+        }
+        .info-card {
+            background: rgba(13, 26, 18, 0.85);
+            border: 1px solid rgba(46, 90, 54, 0.4);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        .info-card h2 {
+            font-size: 1.8rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+        .info-card p {
+            font-size: 1.05rem;
+            color: #9ca3af;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        .info-card p:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand-name">Rehkitzrettung Heuberg e.V.</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" style="color: #4ade80;">Startseite</a></li>
+                <li><a href="ablauf.html">Rettungsablauf</a></li>
+                <li><a href="ueber-uns.html">Über uns</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <h1 class="hero-title">Wir retten Rehkitze</h1>
+        <p class="hero-subtitle">Mit Wärmebilddrohnen und ehrenamtlichen Helfern schützen wir junge Wildtiere vor dem sicheren Mähtod im hohen Gras.</p>
+    </section>
+
+    <section class="info-section">
+        <div class="info-card">
+            <h2>Warum müssen Rehkitze gerettet werden?</h2>
+            <p>Im Frühjahr, zur Hauptsetzzeit der Rehe von Mai bis Juni, setzen die Ricken ihren Nachwuchs im hohen Wiesen- und Feldgras ab. Neugeborene Kitze besitzen in ihren ersten Lebenswochen keinen Fluchtinstinkt. Statt wegzulaufen, drücken sie sich bei Gefahr instinktiv flach an den Boden und vertrauen völlig auf ihre Tarnung.</p>
+            <p>Wenn Wiesen für die Futterernte gemäht werden, sind die gut versteckten Tiere für Landwirte auf dem Traktor meist unmöglich rechtzeitig zu erkennen. Die hochmodernen Mähwerke arbeiten so schnell und flächig, dass Rehkitze ohne vorherige Suche dem sicheren Tod oder schweren Verletzungen ausgesetzt wären. Mit unserer Drohnensuche verhindern wir genau das und schützen die Jungtiere wirksam vor dem Mähtod.</p>
+        </div>
+    </section>
+</body>
+</html>

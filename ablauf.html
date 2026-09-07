@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rettungsablauf – Rehkitzrettung Heuberg e.V.</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #070d09 0%, #0d1a12 50%, #050a07 100%);
+            color: #f3f4f6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        header {
+            width: 100%;
+            padding: 15px 40px;
+            background: rgba(7, 13, 9, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(46, 90, 54, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            animation: fadeInDown 0.8s ease-out;
+        }
+        .brand-name {
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav ul li a {
+            color: #d1d5db;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover { color: #4ade80; }
+        .content-section {
+            max-width: 900px;
+            margin: 120px auto 60px auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 30px;
+            text-align: center;
+            letter-spacing: 0.5px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        .step-container { display: flex; flex-direction: column; gap: 20px; }
+        .step-card {
+            background: rgba(13, 26, 18, 0.85);
+            border: 1px solid rgba(46, 90, 54, 0.4);
+            border-radius: 16px;
+            padding: 25px 30px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease-out;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .step-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(74, 222, 128, 0.6);
+        }
+        .step-card:nth-child(1) { animation-delay: 0.1s; }
+        .step-card:nth-child(2) { animation-delay: 0.2s; }
+        .step-card:nth-child(3) { animation-delay: 0.3s; }
+        .step-card:nth-child(4) { animation-delay: 0.4s; }
+        .step-number {
+            background: #2e5a36;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.2rem;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        .step-content h3 { font-size: 1.25rem; color: #ffffff; margin-bottom: 8px; }
+        .step-content p { font-size: 0.95rem; color: #9ca3af; line-height: 1.5; }
+        .warning-text { color: #f87171; font-weight: 600; margin-top: 5px; display: block; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand-name">Rehkitzrettung Heuberg e.V.</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="ablauf.html" style="color: #4ade80;">Rettungsablauf</a></li>
+                <li><a href="ueber-uns.html">Über uns</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-section">
+        <h1 class="section-title">Unser Ablauf</h1>
+        
+        <div class="step-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Meldung durch den Landwirt</h3>
+                    <p>Der Landwirt meldet sich bestenfalls 48 Stunden im Voraus bei uns und schickt die zu mähenden Flächen zu.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Planung & Team-Zusammenstellung</h3>
+                    <p>Nach Erhalt der Daten beginnt unsere interne Planung. Wir stellen ein Team aus erfahrenen Piloten und Helfern zusammen.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Drohnenflug & Professionelle Rettung</h3>
+                    <p>Wir kommen mit Drohne und ausgebildeten Helfern vor Ort und fliegen die gesamte Fläche ab. Entdecken wir ein Kitz, wird es von unseren geschulten Experten fachgerecht und tierschutzgerecht gesichert.
+                    <span class="warning-text">Wichtig: Niemals selbst auf die Suche gehen – durch menschlichen Geruch besteht extreme Gefahr, dass die Muttertiere ihre Kitze verstoßen oder diese ungeschützt in Gefahr geraten!</span></p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Mahd & Freilassung</h3>
+                    <p>Nachdem die Tiere sicher aus der Wiese gebracht wurden, mäht der Landwirt die Fläche. Im Anschluss werden die Kitze direkt vor Ort oder in sicherer Umgebung wieder in die Freiheit entlassen.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
